@@ -8,7 +8,7 @@ let currencyTypes = ["USD", "INR", "EUR", "GBP", "JPY", "AUD", "CAD", "CHF", "CN
 let inputCurracyType = "USD";
 let userEenteredAmount = 1;
 
-// Populate dropdowns
+
 currencyTypes.forEach((currency) => {
     let option1 = document.createElement("option");
     let option2 = document.createElement("option");
@@ -23,13 +23,13 @@ currencyTypes.forEach((currency) => {
     outPutCurrancyType.appendChild(option2);
 });
 
-// Change input currency
+
 mainCurrecncySelectors.addEventListener("change", () => {
     inputCurracyType = mainCurrecncySelectors.value;
     userEenteredAmount = inputAmout.value;
 });
 
-// Convert function
+
 async function convertCurrancy(changeto) {
     try {
         userEenteredAmount = inputAmout.value;
@@ -52,12 +52,13 @@ async function convertCurrancy(changeto) {
     }
 }
 
-// When user changes "to currency"
+
 outPutCurrancyType.addEventListener("change", () => {
     convertCurrancy(outPutCurrancyType.value);
 });
 
-// Button convert click
+
 document.getElementById("convertBtn").addEventListener("click", () => {
     convertCurrancy(outPutCurrancyType.value);
 });
+
